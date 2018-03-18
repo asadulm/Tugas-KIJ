@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Classical Encryption Methods</title>
+
+	<script>
+		var alpha=new Array('a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z')
+		function monoalpha(){
+			var key=new Array();
+			var key=prompt("Enter key of 26 characters:");
+			var msg=new Array();
+			msg=prompt("Masukkan pesan rahasia:");
+			var cip=new Array();
+			var i,j;
+
+			for(i=0; i<msg.length; i++){
+				for(j=0; j<26; j++){
+					if (msg[i]==alpha[j]){
+						cip[i]=key[j];
+						break;
+					}
+					cip[i]=" ";
+				}
+			}
+			document.write("Encrypted message: <br>");
+			for(var k=0; k<cip.length; k++){
+				document.write(cip[k]);
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<button onclick="monoalpha()">Monoalphabetic Cipher</button>
+</body>
+</html>
